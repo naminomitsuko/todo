@@ -1,6 +1,5 @@
-'use client'
 import { useState, KeyboardEvent } from 'react'
-import styles from './TodoInput.module.css'
+import './TodoInput.css'
 
 interface Props {
   onAdd: (text: string) => void
@@ -20,7 +19,7 @@ export default function TodoInput({ onAdd }: Props) {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className="todo-input">
       <input
         type="text"
         value={value}

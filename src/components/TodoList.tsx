@@ -1,6 +1,6 @@
-import { Todo } from '@/types'
+import { Todo } from '../types'
 import TodoItem from './TodoItem'
-import styles from './TodoList.module.css'
+import './TodoList.css'
 
 interface Props {
   todos: Todo[]
@@ -10,13 +10,18 @@ interface Props {
 
 export default function TodoList({ todos, onToggle, onDelete }: Props) {
   if (todos.length === 0) {
-    return <p className={styles.empty}>該当するタスクがありません</p>
+    return <div className="todo-list-empty">該当するタスクがありません</div>
   }
 
   return (
-    <ul className={styles.list}>
+    <ul className="todo-list">
       {todos.map(todo => (
-        <TodoItem key={todo.id} todo={todo} onToggle={onToggle} onDelete={onDelete} />
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onToggle={onToggle}
+          onDelete={onDelete}
+        />
       ))}
     </ul>
   )

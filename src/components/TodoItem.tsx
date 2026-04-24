@@ -1,7 +1,6 @@
-'use client'
 import { useState } from 'react'
-import { Todo } from '@/types'
-import styles from './TodoItem.module.css'
+import { Todo } from '../types'
+import './TodoItem.css'
 
 interface Props {
   todo: Todo
@@ -14,23 +13,23 @@ export default function TodoItem({ todo, onToggle, onDelete }: Props) {
 
   return (
     <li
-      className={`${styles.item} ${todo.completed ? styles.completed : ''}`}
+      className={`todo-item ${todo.completed ? 'completed' : ''}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <button
-        className={styles.toggle}
+        className="toggle-btn"
         onClick={() => onToggle(todo.id)}
         aria-label={todo.completed ? '未完了に戻す' : '完了にする'}
       >
-        {todo.completed && <span className={styles.check}>✓</span>}
+        <span className="checkmark">{todo.completed ? '✓' : ''}</span>
       </button>
 
-      <span className={styles.text}>{todo.text}</span>
+      <span className="todo-text">{todo.text}</span>
 
       {hovered && (
         <button
-          className={styles.delete}
+          className="delete-btn"
           onClick={() => onDelete(todo.id)}
           aria-label="削除"
         >
