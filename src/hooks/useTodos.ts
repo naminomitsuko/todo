@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react'
 import { Todo } from '../types'
 
@@ -13,11 +14,19 @@ function loadTodos(): Todo[] {
 }
 
 export function useTodos() {
-  const [todos, setTodos] = useState<Todo[]>(loadTodos)
+  const [todos, setTodos] = useState<Todo[]>([])
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
-  }, [todos])
+    setTodos(loadTodos())
+    setHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (hydrated) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+    }
+  }, [todos, hydrated])
 
   const addTodo = (text: string) => {
     const trimmed = text.trim()
@@ -42,5 +51,5 @@ export function useTodos() {
     setTodos(prev => prev.filter(t => !t.completed))
   }
 
-  return { todos, addTodo, toggleTodo, deleteTodo, clearCompleted }
+  return { todos, hydrated, addTodo, toggleTodo, deleteTodo, clearCompleted }
 }

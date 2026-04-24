@@ -13,8 +13,3 @@ body {
   justify-content: center;
   padding: 48px 16px;
 }
-
-#root {
-  width: 100%;
-  max-width: 600px;
-}

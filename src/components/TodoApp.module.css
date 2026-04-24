@@ -1,16 +1,18 @@
 .app {
+  width: 100%;
+  max-width: 600px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
-.app-header {
+.header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 32px;
 }
 
-.app-header h1 {
+.header h1 {
   color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
@@ -18,11 +20,7 @@
   text-align: center;
 }
 
-.app-main {
-  padding: 0;
-}
-
-.app-footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,12 +32,12 @@
   flex-wrap: wrap;
 }
 
-.todo-count {
+.count {
   color: #888;
   white-space: nowrap;
 }
 
-.clear-btn {
+.clearBtn {
   background: none;
   border: none;
   color: #888;
@@ -48,15 +46,14 @@
   padding: 4px 8px;
   border-radius: 4px;
   transition: color 0.15s, background 0.15s;
-  white-space: nowrap;
 }
 
-.clear-btn:hover {
+.clearBtn:hover {
   color: #e53e3e;
   background: #fff5f5;
 }
 
-.empty-state {
+.empty {
   padding: 48px 32px;
   text-align: center;
   color: #bbb;

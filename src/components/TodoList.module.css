@@ -1,8 +1,8 @@
-.todo-list {
+.list {
   list-style: none;
 }
 
-.todo-list-empty {
+.empty {
   padding: 32px;
   text-align: center;
   color: #bbb;

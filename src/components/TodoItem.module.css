@@ -1,4 +1,4 @@
-.todo-item {
+.item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -7,16 +7,16 @@
   transition: background 0.1s;
 }
 
-.todo-item:hover {
+.item:hover {
   background: #fafafa;
 }
 
-.todo-item.completed .todo-text {
+.item.completed .text {
   color: #bbb;
   text-decoration: line-through;
 }
 
-.toggle-btn {
+.toggle {
   width: 28px;
   height: 28px;
   border: 2px solid #d1d5db;
@@ -30,30 +30,30 @@
   transition: border-color 0.15s, background 0.15s;
 }
 
-.todo-item.completed .toggle-btn {
+.item.completed .toggle {
   background: #667eea;
   border-color: #667eea;
 }
 
-.toggle-btn:hover {
+.toggle:hover {
   border-color: #667eea;
 }
 
-.checkmark {
+.check {
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1;
 }
 
-.todo-text {
+.text {
   flex: 1;
   font-size: 1rem;
   color: #333;
   word-break: break-word;
 }
 
-.delete-btn {
+.delete {
   background: none;
   border: none;
   color: #e53e3e;
@@ -66,6 +66,6 @@
   line-height: 1;
 }
 
-.delete-btn:hover {
+.delete:hover {
   background: #fff5f5;
 }

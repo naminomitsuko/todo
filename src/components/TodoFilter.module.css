@@ -1,9 +1,9 @@
-.todo-filter {
+.wrapper {
   display: flex;
   gap: 2px;
 }
 
-.filter-btn {
+.btn {
   background: none;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -14,12 +14,12 @@
   transition: all 0.15s;
 }
 
-.filter-btn:hover {
+.btn:hover {
   border-color: #667eea;
   color: #667eea;
 }
 
-.filter-btn.active {
+.btn.active {
   border-color: #667eea;
   color: #667eea;
   font-weight: 600;

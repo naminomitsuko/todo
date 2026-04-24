@@ -1,5 +1,6 @@
-import { FilterType } from '../types'
-import './TodoFilter.css'
+'use client'
+import { FilterType } from '@/types'
+import styles from './TodoFilter.module.css'
 
 interface Props {
   filter: FilterType
@@ -14,11 +15,11 @@ const FILTERS: { label: string; value: FilterType }[] = [
 
 export default function TodoFilter({ filter, onChange }: Props) {
   return (
-    <div className="todo-filter">
+    <div className={styles.wrapper}>
       {FILTERS.map(f => (
         <button
           key={f.value}
-          className={`filter-btn ${filter === f.value ? 'active' : ''}`}
+          className={`${styles.btn} ${filter === f.value ? styles.active : ''}`}
           onClick={() => onChange(f.value)}
         >
           {f.label}
