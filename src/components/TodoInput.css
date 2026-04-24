@@ -1,0 +1,40 @@
+.todo-input {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 18px 20px;
+  font-size: 1rem;
+  color: #333;
+  background: transparent;
+}
+
+.todo-input input::placeholder {
+  color: #ccc;
+}
+
+.todo-input button {
+  border: none;
+  background: #667eea;
+  color: #fff;
+  padding: 0 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.todo-input button:hover:not(:disabled) {
+  background: #5a67d8;
+}
+
+.todo-input button:disabled {
+  background: #c3cde8;
+  cursor: default;
+}

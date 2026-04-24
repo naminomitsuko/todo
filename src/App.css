@@ -1,0 +1,64 @@
+.app {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 32px;
+}
+
+.app-header h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-align: center;
+}
+
+.app-main {
+  padding: 0;
+}
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  font-size: 0.85rem;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.todo-count {
+  color: #888;
+  white-space: nowrap;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.clear-btn:hover {
+  color: #e53e3e;
+  background: #fff5f5;
+}
+
+.empty-state {
+  padding: 48px 32px;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.95rem;
+}
