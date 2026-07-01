@@ -15,7 +15,7 @@ export default function TodoInput({ onAdd }: Props) {
   }
 
   const handleKey = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') submit()
+    if (e.key === 'Enter' && !e.nativeEvent.isComposing) submit()
   }
 
   return (
